@@ -3,6 +3,7 @@
 *.log
 *.aux
 *.synctex.gz
+*.out
 
 #Temporary
 *~
