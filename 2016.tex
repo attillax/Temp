@@ -1,0 +1,75 @@
+\documentclass[tikz=true,x11names]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{tikz}
+\usetikzlibrary{shapes, positioning, arrows}
+
+\tikzstyle{box} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{document}
+
+\begin{tikzpicture} [node distance = 1cm]
+	% Nodes
+	\node (2016) [box] {2016};
+	\node (2016_1) [below of=2016] {};
+	
+	\node (polimi) [box, below of=2016_1] {PoliMi};
+		\node (fex) [box, below of=polimi, yshift = -1cm, xshift = 1cm] {February exams};
+		\node (jex) [box, below of=fex, yshift = -1cm] {July exams};
+		\node (sex) [box, below of=jex, yshift = -1cm] {September exams};
+	
+	\node (art) [box, right of=polimi, xshift = 5cm] {Art};
+		\node (write) [box, below of=art, yshift = -1cm, xshift = 1cm] {Writing};
+		\node (draw) [box, below of=write, yshift = -1cm] {Drawing};
+		\node (knit) [box, below of=draw, yshift = -1cm] {Knitting};
+	
+	\node (health) [box, right of=art, xshift = 5cm] {Health};
+		\node (phy) [box, below of=health, yshift = -1cm, xshift = 1cm] {Physical};
+		\node (psy) [box, below of=phy, yshift = -1cm] {Psychological};
+	
+	\node (lit) [box, right of=health, xshift = 5cm] {Literature};
+		\node (flit) [box, below of=lit, yshift = -1cm, xshift = 1cm] {Fiction};
+		\node (tlit) [box, below of=flit, yshift = -1cm] {Technical};
+		
+	\node (proj) [box, right of=lit, xshift = 5cm] {Projects};
+	
+	\node (money) [box, right of=proj, xshift = 5cm] {Funds sources};
+		\node (work) [box, below of=money, yshift = -1cm, xshift = 1cm] {Work};
+		\node (mart) [box, below of=work, yshift = -1cm] {Art};
+		
+	\node (travel) [box, right of=money, xshift = 5cm] {Travels};
+
+	% Edges
+	\draw [arrow] (2016) -- (2016_1);
+	
+	\draw [arrow] (2016_1) -- (polimi);
+		\draw [arrow] (polimi.west) |- (fex.west);
+		\draw [arrow] (polimi.west) |- (jex.west);
+		\draw [arrow] (polimi.west) |- (sex.west);
+	
+	\draw [arrow] (2016_1) -| (art);
+		\draw [arrow] (art.west) |- (write.west);
+		\draw [arrow] (art.west) |- (draw.west);
+		\draw [arrow] (art.west) |- (knit.west);
+	
+	\draw [arrow] (2016_1) -| (health);	
+		\draw [arrow] (health.west) |- (phy.west);
+		\draw [arrow] (health.west) |- (psy.west);
+	
+	\draw [arrow] (2016_1) -| (lit);	
+		\draw [arrow] (lit.west) |- (flit.west);
+		\draw [arrow] (lit.west) |- (tlit.west);
+	
+	\draw [arrow] (2016_1) -| (proj);
+	
+	\draw [arrow] (2016_1) -| (money);
+		\draw [arrow] (money.west) |- (work.west);
+		\draw [arrow] (money.west) |- (mart.west);
+			
+	\draw [arrow] (2016_1) -| (travel);
+	
+\end{tikzpicture}
+
+\end{document}
