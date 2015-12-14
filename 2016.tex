@@ -1,8 +1,11 @@
 \documentclass[tikz=true,x11names]{standalone}
 \usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
+\usepackage[russian]{babel} 
+\usepackage{xcolor}
+\usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{shapes, positioning, arrows}
+
 
 \tikzstyle{box} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
 
@@ -15,39 +18,52 @@
 	\node (2016) [box] {2016};
 	\node (2016_1) [below of=2016] {};
 	
-	\node (polimi) [box, below of=2016_1] {PoliMi};
-		\node (fex) [box, below of=polimi, yshift = -1cm, xshift = 1cm] {February exams};
-		\node (jex) [box, below of=fex, yshift = -1cm] {July exams};
-		\node (sex) [box, below of=jex, yshift = -1cm] {September exams};
+	\node (lern) [box, below of=2016_1] {Lernen};
+		\node (polimi) [box, below=of lern, xshift=1cm] {PoliMi};
+			\node (fex) [box, below=of polimi, xshift=1cm] {February exams};
+			\node (jex) [box, below=of fex] {July exams};
+			\node (sex) [box, below=of jex] {September exams};
+		\node (c_lern) [box, below=of sex, xshift=-1cm] {Courses};
+			\node (ce_lern) [box, below=of c_lern, xshift=1cm] {edX};
+			\node (cc_lern) [box, below=of ce_lern] {Coursera};
 	
-	\node (art) [box, right of=polimi, xshift = 5cm] {Art};
-		\node (write) [box, below of=art, yshift = -1cm, xshift = 1cm] {Writing};
-		\node (draw) [box, below of=write, yshift = -1cm] {Drawing};
-		\node (knit) [box, below of=draw, yshift = -1cm] {Knitting};
+	\node (art) [box, right=of lern, xshift=2cm] {Art};
+		\node (write) [box, below=of art, xshift=1cm] {Writing};
+		\node (draw) [box, below=of write] {Drawing};
+		\node (knit) [box, below=of draw] {Knitting};
 	
-	\node (health) [box, right of=art, xshift = 5cm] {Health};
-		\node (phy) [box, below of=health, yshift = -1cm, xshift = 1cm] {Physical};
-		\node (psy) [box, below of=phy, yshift = -1cm] {Psychological};
+	\node (health) [box, right=of art, xshift=2cm] {Health};
+		\node (phy) [box, below=of health, xshift=1cm] {Physical};
+		\node (psy) [box, below=of phy] {Psychological};
 	
-	\node (lit) [box, right of=health, xshift = 5cm] {Literature};
-		\node (flit) [box, below of=lit, yshift = -1cm, xshift = 1cm] {Fiction};
-		\node (tlit) [box, below of=flit, yshift = -1cm] {Technical};
+	\node (lit) [box, right=of health, xshift=2cm] {Literature};
+		\node (flit) [box, below=of lit, xshift=1cm] {Fiction};
+		\node (tlit) [box, below=of flit] {Technical};
+			\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
+		\node (alit) [box, below=of ptlit,  xshift=-1cm] {Art};
 		
-	\node (proj) [box, right of=lit, xshift = 5cm] {Projects};
+	\node (proj) [box, right=of lit, xshift=2cm] {Projects};
+		\node (prog) [box, below=of proj, xshift=1cm] {Programming};
+		\node (anim) [box, below=of prog] {Animation};
 	
-	\node (money) [box, right of=proj, xshift = 5cm] {Funds sources};
-		\node (work) [box, below of=money, yshift = -1cm, xshift = 1cm] {Work};
-		\node (mart) [box, below of=work, yshift = -1cm] {Art};
+	\node (money) [box, right=of proj, xshift=2cm] {Funds sources};
+		\node (work) [box, below=of money, xshift=1cm] {Work};
+		\node (mart) [box, below=of work] {Art};
 		
-	\node (travel) [box, right of=money, xshift = 5cm] {Travels};
+	\node (travel) [box, right=of money, xshift=2cm] {Travels};
 
 	% Edges
 	\draw [arrow] (2016) -- (2016_1);
 	
-	\draw [arrow] (2016_1) -- (polimi);
-		\draw [arrow] (polimi.west) |- (fex.west);
-		\draw [arrow] (polimi.west) |- (jex.west);
-		\draw [arrow] (polimi.west) |- (sex.west);
+	\draw [arrow] (2016_1) -- (lern);
+		\draw [arrow] (lern.west) |- (polimi.west);	
+			\draw [arrow] (polimi.west) |- (fex.west);
+			\draw [arrow] (polimi.west) |- (jex.west);
+			\draw [arrow] (polimi.west) |- (sex.west);
+		\draw [arrow] (lern.west) |- (c_lern.west);	
+			\draw [arrow] (c_lern.west) |- (ce_lern.west);	
+			\draw [arrow] (c_lern.west) |- (cc_lern.west);	
+		
 	
 	\draw [arrow] (2016_1) -| (art);
 		\draw [arrow] (art.west) |- (write.west);
@@ -61,8 +77,12 @@
 	\draw [arrow] (2016_1) -| (lit);	
 		\draw [arrow] (lit.west) |- (flit.west);
 		\draw [arrow] (lit.west) |- (tlit.west);
+			\draw [arrow] (tlit.west) |- (ptlit.west);
+		\draw [arrow] (lit.west) |- (alit.west);
 	
 	\draw [arrow] (2016_1) -| (proj);
+		\draw [arrow] (proj.west) |- (prog.west);
+		\draw [arrow] (proj.west) |- (anim.west);
 	
 	\draw [arrow] (2016_1) -| (money);
 		\draw [arrow] (money.west) |- (work.west);
