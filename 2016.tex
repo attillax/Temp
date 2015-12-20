@@ -26,8 +26,11 @@
 		\node (c_lern) [box, below=of sex, xshift=-1cm] {Courses};
 			\node (ce_lern) [box, below=of c_lern, xshift=1cm] {edX};
 			\node (cc_lern) [box, below=of ce_lern] {Coursera};
+		\node (l_lern) [box, below=of cc_lern, xshift=-1cm] {Languages};
+			\node (li_lern) [box, below=of l_lern, xshift=1cm] {Italiano};
+			\node (le_lern) [box, below=of li_lern] {English};
 	
-	\node (art) [box, right=of lern, xshift=2cm] {Art};
+	\node (art) [box, right=of lern, xshift=3cm] {Art};
 		\node (write) [box, below=of art, xshift=1cm] {Writing};
 		\node (draw) [box, below=of write] {Drawing};
 		\node (knit) [box, below=of draw] {Knitting};
@@ -40,7 +43,8 @@
 		\node (flit) [box, below=of lit, xshift=1cm] {Fiction};
 		\node (tlit) [box, below=of flit] {Technical};
 			\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
-		\node (alit) [box, below=of ptlit,  xshift=-1cm] {Art};
+			\node (mtlit) [box, below=of ptlit] {Management};
+		\node (alit) [box, below=of mtlit,  xshift=-1cm] {Art};
 		
 	\node (proj) [box, right=of lit, xshift=2cm] {Projects};
 		\node (prog) [box, below=of proj, xshift=1cm] {Programming};
@@ -63,6 +67,9 @@
 		\draw [arrow] (lern.west) |- (c_lern.west);	
 			\draw [arrow] (c_lern.west) |- (ce_lern.west);	
 			\draw [arrow] (c_lern.west) |- (cc_lern.west);	
+		\draw [arrow] (lern.west) |- (l_lern.west);	
+		\draw [arrow] (l_lern.west) |- (li_lern.west);
+		\draw [arrow] (l_lern.west) |- (le_lern.west);	
 		
 	
 	\draw [arrow] (2016_1) -| (art);
@@ -77,7 +84,8 @@
 	\draw [arrow] (2016_1) -| (lit);	
 		\draw [arrow] (lit.west) |- (flit.west);
 		\draw [arrow] (lit.west) |- (tlit.west);
-			\draw [arrow] (tlit.west) |- (ptlit.west);
+		\draw [arrow] (tlit.west) |- (ptlit.west);
+		\draw [arrow] (tlit.west) |- (mtlit.west);
 		\draw [arrow] (lit.west) |- (alit.west);
 	
 	\draw [arrow] (2016_1) -| (proj);
