@@ -1,17 +1,25 @@
 \documentclass[a4paper,12pt]{article} %page properties
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
 \usepackage{fullpage}
 \usepackage{hyperref} %for urls
+\usepackage{tabularx}
 \usepackage{longtable} %for tables on multiple pages
 
 \begin{document}
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\tableofcontents
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\section{Main List}
 \begin{longtable}{|l|p{6cm}|c|c|l|}
 	\hline
 	code & f.title & b.date & e.date & Note \\
 	\hline
 	\multicolumn{5}{|l|}{edX}\\
 	\hline
-	IT.1.1x & Introduction to Programming with Java &  &  & Part 1, self-paced\\
+	IT.1.1x & Introduction to Programming with Java &  & 2016-07-01 & Part 1, self-paced\\
 	\hline
 	&  &  &  &  \\
 	\hline
@@ -57,9 +65,237 @@
 	\hline
 	&  &  &  &  \\
 	\hline
+	\multicolumn{5}{|l|}{Propellers}\\
+	\hline
+	& 3D-мультфильм с нуля &  &  &  \\
+	\hline
+	& Blender Level-Up &  &  &  \\
+	\hline
+	&  &  &  &  \\
+	\hline
 \end{longtable}
 
-.\\
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\section{Graphic}
+\subsection{Propellers}
+\subsubsection{3d}
+\begin{longtable}{|l|p{11cm}|l|l|}
+	\hline
+	\# & Topic & Len & Note \\
+	\hline
+	1 &  &  &  \\
+	a & Интерфейс &  &  \\
+	b & Редактирование &  &  \\
+	c & Видеомонтаж &  &  \\
+	\hline
+	2 &  &  &  \\
+	a & Архитектура &  &  \\
+	b & Материалы &  &  \\
+	c & Моделирование &  &  \\
+	\hline
+	3 & Модификаторы &  &  \\
+	\hline
+	4 &  &  &  \\
+	a & Оснастка, часть1 &  &  \\
+	b & Оснастка, часть2 &  &  \\
+	\hline
+	5 &  &  &  \\
+	a & Скелет &  &  \\
+	b & Модификатор Skin &  &  \\
+	\hline
+	6 &  &  &  \\
+	a & Ключи формы &  &  \\
+	b & Гуманоидный риг &  &  \\
+	\hline
+	7 &  &  &  \\
+	a & Шейдеры Internal &  &  \\
+	b & Шейдеры Cycles &  &  \\
+	\hline
+	8 &  &  &  \\
+	a & UV развертка &  &  \\
+	b & Рисование текстур &  &  \\
+	c & Рендер UV &  &  \\
+	\hline
+	9 &  &  &  \\
+	a & Кривые анимации &  &  \\
+	b & Работа с ключами &  &  \\
+	c & Скелетная анимация &  &  \\
+	\hline
+	10 & 12 правил анимации &  &  \\
+	\hline
+	11 &  &  &  \\
+	a & Основы линкования &  &  \\
+	b & Типы адресов &  &  \\
+	c & Сложное линкование &  &  \\
+	d & Связи датаблоков &  &  \\
+	\hline
+	12 & Композитинг &  &  \\
+	\hline
+	13 &  &  &  \\
+	a & Техника безопасности &  &  \\
+	b & Жизнь после курса &  &  \\
+	\hline
+	&  &  &  \\
+	\hline
+\end{longtable}
+
+\subsubsection{Level-Up}
+\begin{longtable}{|l|p{11cm}|l|l|}
+	\hline
+	\# & Topic & Len & Note \\
+	\hline
+	1 &  &  &  \\
+	a & Хоткеи &  &  \\
+	b & Скрытые функции &  &  \\
+	\hline
+	2 &  &  &  \\
+	a & Азбука NLA &  &  \\
+	b & Применение NLA &  &  \\
+	\hline
+	3 &  &  &  \\
+	a & Анимация мяча &  &  \\
+	\hline
+	&  &  &  \\
+	\hline
+\end{longtable}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\section{Data Analysis}
+\subsection{QM901x Predictive Analytics}
+
+\begin{longtable}{|l|p{11cm}|l|l|l|}
+		\hline
+		\# & Topic & Len & Ass & Date \\
+		\hline
+		1 & \multicolumn{4}{|l|}{25-11-2015 \hfill Introduction to Analytics \hfill 23-12-2015}\\
+		\hline
+		& Introduction to Analytics & 4-28 & & 21-12 \\
+		\hline
+		& Analytics in Decision Making & & & \\
+		\hline
+		& Game changers \& Innovators & & & \\
+		\hline
+		& Predictive Analytics & & & \\
+		\hline
+		& Experts view on Analytics & & & \\
+		\hline
+		2 & \multicolumn{4}{|l|}{2-12-2015 \hfill Simple Linear Regression (SLR) \hfill 23-12-2015}\\
+		\hline
+		& Case-let Overview & & & \\
+		\hline
+		& Introduction to Regression & & & \\
+		\hline
+		& Model Development & & & \\
+		\hline
+		& Model Validation & & & \\
+		\hline
+		& Demo using Excel \& SPSS & & & \\
+		\hline
+		3 & \multicolumn{4}{|l|}{9-12-2015 \hfill Multiple Linear Regression (MLR) \hfill 23-12-2015}\\
+		\hline
+		& Multiple Linear Regression & & & \\
+		\hline
+		& Estimation of Regression Parameters & & & \\
+		\hline
+		& Model Diagnostics & & & \\
+		\hline
+		& Dummy, Derived \& Interaction Variables & & & \\
+		\hline
+		& Multi-collinearity & & & \\
+		\hline
+		& Model Deployment & & & \\
+		\hline
+		& Demo using SPSS & & & \\
+		\hline
+		4 & \multicolumn{4}{|l|}{16-12-2015 \hfill Logistic Regression \hfill 23-12-2015}\\
+		\hline
+		& Discrete choice models & & & \\
+		\hline
+		& Logistic Regression & & & \\
+		\hline
+		& MLE Estimation of Parameters & & & \\
+		\hline
+		& Logistic Model Interpretation & & & \\
+		\hline
+		& Logistic Model Diagnostics & & & \\
+		\hline
+		& Logistic Model Deployment & & & \\
+		\hline
+		& Demo using SPSS & & & \\
+		\hline
+		\multicolumn{5}{|l|}{Mid-Term \hfill 30-12-2015}\\
+		\hline
+		5 & \multicolumn{4}{|l|}{30-12-2015 \hfill Decision Trees and Unstructured data analysis \hfill 13-01-2016}\\
+		\hline
+		& Introduction to Decision Trees & & & \\
+		\hline
+		& CHI-Square Automatic Interaction Detectors (CHAID) & & & \\
+		\hline
+		& Classification and Regression Tree (CART) & & & \\
+		\hline
+		& Analysis of Unstructured data & & & \\
+		\hline
+		& Naive Bayes Classification & & & \\
+		\hline
+		& Demo using SPSS & & & \\
+		\hline
+		6 & \multicolumn{4}{|l|}{6-1-2016 \hfill Forecasting and Time series Analysis \hfill 13-01-2016}\\
+		\hline
+		& Forecasting & & & \\
+		\hline
+		& Time Series Analysis & & & \\
+		\hline
+		& Additive \& Multiplicative models & & & \\
+		\hline
+		& Exponential smoothing techniques & & & \\
+		\hline
+		& Forecasting Accuracy & & & \\
+		\hline
+		& Auto-regressive and Moving average models & & & \\
+		\hline
+		& Demo using SPSS & & & \\
+		\hline
+		\multicolumn{5}{|l|}{Final \hfill 13-01-2016}\\
+		\hline
+\end{longtable}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\section{Languages}
+\subsection{IT.1.1x Introduction to Programming with Java - Part 1: Starting to Code with Java}
+
+\begin{longtable}{|l|p{11cm}|l|l|l|}
+	\hline
+	\# & Topic & Len & Ass & Date \\
+	\hline
+	0 & \multicolumn{4}{|l|}{Introduction}\\
+	\hline
+	& & & &  \\
+	\hline
+	1 & \multicolumn{4}{|l|}{From the Calculator to the Computer}\\
+	\hline
+	& & & &  \\
+	\hline
+	2 & \multicolumn{4}{|l|}{State Transformation}\\
+	\hline
+	& & & &  \\
+	\hline
+	3 & \multicolumn{4}{|l|}{Functional Abstraction}\\
+	\hline
+	& & & &  \\
+	\hline
+	4 & \multicolumn{4}{|l|}{Object Encapsulation}\\
+	\hline
+	& & & &  \\
+	\hline
+	5 & \multicolumn{4}{|l|}{Packaging}\\
+	\hline
+	& & & &  \\
+	\hline
+\end{longtable}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \end{document}
