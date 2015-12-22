@@ -23,7 +23,8 @@
 			\node (jex) [box, below=of fex] {July exams};
 			\node (sex) [box, below=of jex] {September exams};
 			\node (tes) [box, below=of sex] {Tesis};
-		\node (c_lern) [box, below=of tes, xshift=-1cm] {Courses};
+		\node (p_lern) [box, below=of tes, xshift=-1cm] {Programming};
+		\node (c_lern) [box, below=of p_lern] {Courses};
 			\node (ce_lern) [box, below=of c_lern, xshift=1cm] {edX};
 			\node (cc_lern) [box, below=of ce_lern] {Coursera};
 		\node (l_lern) [box, below=of cc_lern, xshift=-1cm] {Languages};
@@ -32,7 +33,8 @@
 			
 	\node (proj) [box, right=of lern, xshift=3cm] {Projects};
 		\node (prog) [box, below=of proj, xshift=1cm] {Programming};
-		\node (anim) [box, below=of prog] {Animation};
+		\node (mod) [box, below=of prog] {Modelling};
+		\node (anim) [box, below=of mod] {Animation};
 
 	\node (art) [box, right=of proj, xshift=2cm] {Art};
 		\node (write) [box, below=of art, xshift=1cm] {Writing};
@@ -45,8 +47,13 @@
 		\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
 		\node (mtlit) [box, below=of ptlit] {Management};
 		\node (alit) [box, below=of mtlit,  xshift=-1cm] {Art};
+		
+	\node (seen) [box, right=of lit, xshift=3cm] {Seen};
+		\node (mu_seen) [box, below=of seen, xshift=1cm] {Music};
+		\node (mo_seen) [box, below=of mu_seen] {Movies};	
+		\node (s_seen) [box, below=of mo_seen] {Series};
 	
-	\node (health) [box, right=of lit, xshift=2cm] {Health};
+	\node (health) [box, right=of seen, xshift=2cm] {Health};
 		\node (phy) [box, below=of health, xshift=1cm] {Physical};
 		\node (psy) [box, below=of phy] {Psychological};
 	
@@ -55,8 +62,6 @@
 		\node (mart) [box, below=of work] {Art};
 		
 	\node (travel) [box, right=of money, xshift=2cm] {Travels};
-		
-	\node (music) [box, right=of travel, xshift=1cm] {Music};
 
 	% Edges
 	\draw [arrow] (2016) -- (2016_1);
@@ -67,6 +72,7 @@
 			\draw [arrow] (polimi.west) |- (jex.west);
 			\draw [arrow] (polimi.west) |- (sex.west);
 			\draw [arrow] (polimi.west) |- (tes.west);
+		\draw [arrow] (lern.west) |- (p_lern.west);	
 		\draw [arrow] (lern.west) |- (c_lern.west);	
 			\draw [arrow] (c_lern.west) |- (ce_lern.west);	
 			\draw [arrow] (c_lern.west) |- (cc_lern.west);	
@@ -76,6 +82,7 @@
 		
 	\draw [arrow] (2016_1) -| (proj);
 		\draw [arrow] (proj.west) |- (prog.west);
+		\draw [arrow] (proj.west) |- (mod.west);
 		\draw [arrow] (proj.west) |- (anim.west);	
 	
 	\draw [arrow] (2016_1) -| (art);
@@ -89,6 +96,11 @@
 		\draw [arrow] (tlit.west) |- (ptlit.west);
 		\draw [arrow] (tlit.west) |- (mtlit.west);
 		\draw [arrow] (lit.west) |- (alit.west);
+		
+		\draw [arrow] (2016_1) -| (seen);
+		\draw [arrow] (seen.west) |- (mu_seen.west);
+		\draw [arrow] (seen.west) |- (mo_seen.west);
+		\draw [arrow] (seen.west) |- (s_seen.west);
 	
 	\draw [arrow] (2016_1) -| (health);	
 		\draw [arrow] (health.west) |- (phy.west);
@@ -99,8 +111,6 @@
 		\draw [arrow] (money.west) |- (mart.west);
 			
 	\draw [arrow] (2016_1) -| (travel);	
-	
-	\draw [arrow] (2016_1) -| (music);
 	
 \end{tikzpicture}
 
