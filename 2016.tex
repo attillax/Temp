@@ -8,6 +8,8 @@
 
 \tikzstyle{box} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
 
+\tikzstyle{line} = [rectangle, text centered, draw=white]
+
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \begin{document}
@@ -29,9 +31,13 @@
 			\node (cc_lern) [box, below=of ce_lern] {Coursera};
 		\node (l_lern) [box, below=of cc_lern, xshift=-1cm] {Languages};
 			\node (li_lern) [box, below=of l_lern, xshift=1cm] {Italiano};
-			\node (le_lern) [box, below=of li_lern] {English};
+				\node (li_lern1) [line, below=of li_lern, xshift=1cm] {Полиглот. 16 часов};
+			\node (le_lern) [box, below=of li_lern1] {English};
 			
-	\node (proj) [box, right=of lern, xshift=3cm] {Projects};
+	\node (ordn) [box, right=of lern, xshift=2cm] {Ordnung};
+		\node (gtd) [box, below=of ordn, xshift=1cm] {GTD};		
+			
+	\node (proj) [box, right=of ordn, xshift=2cm] {Projects};
 		\node (prog) [box, below=of proj, xshift=1cm] {Programming};
 		\node (mod) [box, below=of prog] {Modelling};
 		\node (anim) [box, below=of mod] {Animation};
@@ -78,7 +84,11 @@
 			\draw [arrow] (c_lern.west) |- (cc_lern.west);	
 		\draw [arrow] (lern.west) |- (l_lern.west);	
 		\draw [arrow] (l_lern.west) |- (li_lern.west);
+			\draw [arrow] (li_lern.west) |- (li_lern1.west);
 		\draw [arrow] (l_lern.west) |- (le_lern.west);
+		
+	\draw [arrow] (2016_1) -| (ordn);
+		\draw [arrow] (ordn.west) |- (gtd.west);
 		
 	\draw [arrow] (2016_1) -| (proj);
 		\draw [arrow] (proj.west) |- (prog.west);
