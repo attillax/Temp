@@ -8,7 +8,7 @@
 
 \tikzstyle{box} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
 
-\tikzstyle{line} = [rectangle, text centered, draw=white]
+\tikzstyle{line} = [rectangle, yshift=1cm, draw=white]
 
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
@@ -31,7 +31,7 @@
 			\node (cc_lern) [box, below=of ce_lern] {Coursera};
 		\node (l_lern) [box, below=of cc_lern, xshift=-1cm] {Languages};
 			\node (li_lern) [box, below=of l_lern, xshift=1cm] {Italiano};
-				\node (li_lern1) [line, below=of li_lern, xshift=1cm] {Полиглот. 16 часов};
+				\node (li_lern1) [line, below=of li_lern, xshift=1cm, yshift=-0.5cm] {Полиглот. 16 часов};
 			\node (le_lern) [box, below=of li_lern1] {English};
 			
 	\node (ordn) [box, right=of lern, xshift=2cm] {Ordnung};
@@ -46,20 +46,30 @@
 		\node (write) [box, below=of art, xshift=1cm] {Writing};
 		\node (draw) [box, below=of write] {Drawing};
 		\node (knit) [box, below=of draw] {Knitting};
+			\node (knit_1) [line, below=of knit, yshift=-0.5cm] {Fedora Hat};
 		
 	\node (lit) [box, right=of art, xshift=2cm] {Literature};
 		\node (flit) [box, below=of lit, xshift=1cm] {Fiction};
-		\node (tlit) [box, below=of flit] {Technical};
+			\node (flit_r) [box, below=of flit, xshift=1cm] {На Русском};
+				\node (flit_r1) [line, below=of flit_r, xshift=2cm, yshift=-0.5cm] {Селин, Путешествие на край ночи};
+		\node (tlit) [box, below=of flit_r1, xshift=-3cm] {Technical};
 		\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
 		\node (mtlit) [box, below=of ptlit] {Management};
 		\node (alit) [box, below=of mtlit,  xshift=-1cm] {Art};
 		
-	\node (seen) [box, right=of lit, xshift=3cm] {Seen};
+	\node (seen) [box, right=of lit, xshift=5cm] {Seen};
 		\node (mu_seen) [box, below=of seen, xshift=1cm] {Music};
-		\node (mo_seen) [box, below=of mu_seen] {Movies};	
-		\node (s_seen) [box, below=of mo_seen] {Series};
+		\node (mo_seen) [box, below=of mu_seen] {Movies};
+			\node (moe_seen) [box, below=of mo_seen, xshift=1cm] {On English};
+				\node (moe_seen1) [line, below=of moe_seen, xshift=1cm, yshift=-0.5cm] {The Little Prince (2015)};
+				\node (moe_seen2) [line, below=of moe_seen1] {Spectre};
+				\node (moe_seen3) [line, below=of moe_seen2] {Skyfall};
+				\node (moe_seen4) [line, below=of moe_seen3] {The Martian};
+			\node (mor_seen) [box, below=of moe_seen4, xshift=-1cm] {На Русском};
+			\node (moi_seen) [box, below=of mor_seen] {In Italiano};
+		\node (s_seen) [box, below=of moi_seen] {Series};
 	
-	\node (health) [box, right=of seen, xshift=2cm] {Health};
+	\node (health) [box, right=of seen, xshift=3cm] {Health};
 		\node (phy) [box, below=of health, xshift=1cm] {Physical};
 		\node (psy) [box, below=of phy] {Psychological};
 	
@@ -99,17 +109,27 @@
 		\draw [arrow] (art.west) |- (write.west);
 		\draw [arrow] (art.west) |- (draw.west);
 		\draw [arrow] (art.west) |- (knit.west);
+			\draw [arrow] (knit.west) |- (knit_1.west);
 		
 	\draw [arrow] (2016_1) -| (lit);	
 		\draw [arrow] (lit.west) |- (flit.west);
+			\draw [arrow] (flit.west) |- (flit_r.west);
+				\draw [arrow] (flit_r.west) |- (flit_r1.west);
 		\draw [arrow] (lit.west) |- (tlit.west);
 		\draw [arrow] (tlit.west) |- (ptlit.west);
 		\draw [arrow] (tlit.west) |- (mtlit.west);
 		\draw [arrow] (lit.west) |- (alit.west);
 		
-		\draw [arrow] (2016_1) -| (seen);
+	\draw [arrow] (2016_1) -| (seen);
 		\draw [arrow] (seen.west) |- (mu_seen.west);
 		\draw [arrow] (seen.west) |- (mo_seen.west);
+			\draw [arrow] (mo_seen.west) |- (moe_seen.west);
+				\draw [arrow] (moe_seen.west) |- (moe_seen1.west);
+				\draw [arrow] (moe_seen.west) |- (moe_seen2.west);
+				\draw [arrow] (moe_seen.west) |- (moe_seen3.west);
+				\draw [arrow] (moe_seen.west) |- (moe_seen4.west);
+			\draw [arrow] (mo_seen.west) |- (mor_seen.west);
+			\draw [arrow] (mo_seen.west) |- (moi_seen.west);
 		\draw [arrow] (seen.west) |- (s_seen.west);
 	
 	\draw [arrow] (2016_1) -| (health);	
