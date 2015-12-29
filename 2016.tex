@@ -32,7 +32,7 @@
 		\node (l_lern) [box, below=of cc_lern, xshift=-1cm] {Languages};
 			\node (li_lern) [box, below=of l_lern, xshift=1cm] {Italiano};
 				\node (li_lern1) [line, below=of li_lern, xshift=1cm, yshift=-0.5cm] {Полиглот. 16 часов};
-			\node (le_lern) [box, below=of li_lern1] {English};
+			\node (le_lern) [box, below=of li_lern1, xshift=-1cm] {English};
 			
 	\node (ordn) [box, right=of lern, xshift=2cm] {Ordnung};
 		\node (gtd) [box, below=of ordn, xshift=1cm] {GTD};		
@@ -52,22 +52,34 @@
 		\node (flit) [box, below=of lit, xshift=1cm] {Fiction};
 			\node (flit_r) [box, below=of flit, xshift=1cm] {На Русском};
 				\node (flit_r1) [line, below=of flit_r, xshift=2cm, yshift=-0.5cm] {Селин, Путешествие на край ночи};
-		\node (tlit) [box, below=of flit_r1, xshift=-3cm] {Technical};
+			\node (flit_e) [box, below=of flit_r1, xshift=-2cm] {On English};
+				\node (flit_e1) [line, below=of flit_e, xshift=1cm, yshift=-0.5cm] {Welsh, Trainspotting};
+			\node (flit_i) [box, below=of flit_e1, xshift=-1cm] {In italiano};
+				\node (flit_i1) [line, below=of flit_i, xshift=2cm, yshift=-0.5cm] {London, Il richiamo della foresta};
+		\node (tlit) [box, below=of flit_i1, xshift=-3cm] {Technical};
 		\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
-		\node (mtlit) [box, below=of ptlit] {Management};
+			\node (ptlit1) [line, below=of ptlit, xshift=2cm, yshift=-0.5cm] {Fain, Java Programming (24h)};
+		\node (mtlit) [box, below=of ptlit1, xshift=-2cm] {Management};
 		\node (alit) [box, below=of mtlit,  xshift=-1cm] {Art};
+			\node (alit1) [line, below=of alit, xshift=1cm, yshift=-0.5cm] {Мейхолл, Суми-э};
+			\node (alit2) [line, below=of alit1, xshift=1.5cm] {Campanario, The Art of Urban Sketching};
 		
 	\node (seen) [box, right=of lit, xshift=5cm] {Seen};
 		\node (mu_seen) [box, below=of seen, xshift=1cm] {Music};
 		\node (mo_seen) [box, below=of mu_seen] {Movies};
 			\node (moe_seen) [box, below=of mo_seen, xshift=1cm] {On English};
 				\node (moe_seen1) [line, below=of moe_seen, xshift=1cm, yshift=-0.5cm] {The Little Prince (2015)};
-				\node (moe_seen2) [line, below=of moe_seen1] {Spectre};
+				\node (moe_seen2) [line, below=of moe_seen1, xshift=-1cm] {Spectre};
 				\node (moe_seen3) [line, below=of moe_seen2] {Skyfall};
 				\node (moe_seen4) [line, below=of moe_seen3] {The Martian};
-			\node (mor_seen) [box, below=of moe_seen4, xshift=-1cm] {На Русском};
-			\node (moi_seen) [box, below=of mor_seen] {In Italiano};
+			\node (mor_seen) [box, below=of moe_seen4, xshift=0cm] {На Русском};
+				\node (mor_seen1) [line, below=of mor_seen, xshift=1cm, yshift=-0.5cm] {Рикки и Флеш};
+				\node (mor_seen2) [line, below=of mor_seen1] {Непутевая учеба};
+			\node (moi_seen) [box, below=of mor_seen2, xshift=-1cm] {In Italiano};
 		\node (s_seen) [box, below=of moi_seen] {Series};
+		\node (se_seen) [box, below=of s_seen, xshift=1cm] {On English};
+		\node (sr_seen) [box, below=of se_seen] {На Русском};
+		\node (si_seen) [box, below=of sr_seen] {In Italiano};
 	
 	\node (health) [box, right=of seen, xshift=3cm] {Health};
 		\node (phy) [box, below=of health, xshift=1cm] {Physical};
@@ -94,7 +106,6 @@
 			\draw [arrow] (c_lern.west) |- (cc_lern.west);	
 		\draw [arrow] (lern.west) |- (l_lern.west);	
 		\draw [arrow] (l_lern.west) |- (li_lern.west);
-			\draw [arrow] (li_lern.west) |- (li_lern1.west);
 		\draw [arrow] (l_lern.west) |- (le_lern.west);
 		
 	\draw [arrow] (2016_1) -| (ordn);
@@ -109,12 +120,12 @@
 		\draw [arrow] (art.west) |- (write.west);
 		\draw [arrow] (art.west) |- (draw.west);
 		\draw [arrow] (art.west) |- (knit.west);
-			\draw [arrow] (knit.west) |- (knit_1.west);
 		
 	\draw [arrow] (2016_1) -| (lit);	
 		\draw [arrow] (lit.west) |- (flit.west);
 			\draw [arrow] (flit.west) |- (flit_r.west);
-				\draw [arrow] (flit_r.west) |- (flit_r1.west);
+			\draw [arrow] (flit.west) |- (flit_e.west);
+			\draw [arrow] (flit.west) |- (flit_i.west);
 		\draw [arrow] (lit.west) |- (tlit.west);
 		\draw [arrow] (tlit.west) |- (ptlit.west);
 		\draw [arrow] (tlit.west) |- (mtlit.west);
@@ -124,13 +135,12 @@
 		\draw [arrow] (seen.west) |- (mu_seen.west);
 		\draw [arrow] (seen.west) |- (mo_seen.west);
 			\draw [arrow] (mo_seen.west) |- (moe_seen.west);
-				\draw [arrow] (moe_seen.west) |- (moe_seen1.west);
-				\draw [arrow] (moe_seen.west) |- (moe_seen2.west);
-				\draw [arrow] (moe_seen.west) |- (moe_seen3.west);
-				\draw [arrow] (moe_seen.west) |- (moe_seen4.west);
 			\draw [arrow] (mo_seen.west) |- (mor_seen.west);
 			\draw [arrow] (mo_seen.west) |- (moi_seen.west);
 		\draw [arrow] (seen.west) |- (s_seen.west);
+			\draw [arrow] (s_seen.west) |- (se_seen.west);
+			\draw [arrow] (s_seen.west) |- (sr_seen.west);
+			\draw [arrow] (s_seen.west) |- (si_seen.west);
 	
 	\draw [arrow] (2016_1) -| (health);	
 		\draw [arrow] (health.west) |- (phy.west);
