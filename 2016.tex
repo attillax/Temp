@@ -36,7 +36,10 @@
 				\node (le_lern1) [line, below=of le_lern, xshift=4cm, yshift=-0.5cm] {Longman, Grammar practice for Pre-Intermediate Students};
 			
 	\node (ordn) [box, right=of lern, xshift=2cm] {Ordnung};
-		\node (gtd) [box, below=of ordn, xshift=1cm] {GTD};		
+		\node (lordn) [box, below=of ordn, xshift=1cm] {Life};
+		\node (pordn) [box, below=of lordn] {Planning};
+			\node (pordn1) [line, below=of pordn, yshift=-0.5cm] {Pomodoro};
+			\node (pordn2) [line, below=of pordn1] {Org-mode};
 			
 	\node (proj) [box, right=of ordn, xshift=2cm] {Projects};
 		\node (prog) [box, below=of proj, xshift=1cm] {Programming};
@@ -53,20 +56,25 @@
 		\node (flit) [box, below=of lit, xshift=1cm] {Fiction};
 			\node (flit_r) [box, below=of flit, xshift=1cm] {На Русском};
 				\node (flit_r1) [line, below=of flit_r, xshift=2cm, yshift=-0.5cm] {Селин, Путешествие на край ночи};
-			\node (flit_e) [box, below=of flit_r1, xshift=-2cm] {On English};
+				\node (flit_r2) [line, below=of flit_r1, xshift=-1cm] {Лао Цзы, Дао Де Цзин};
+			\node (flit_e) [box, below=of flit_r2, xshift=-1cm] {On English};
 				\node (flit_e1) [line, below=of flit_e, xshift=1cm, yshift=-0.5cm] {Welsh, Trainspotting};
 			\node (flit_i) [box, below=of flit_e1, xshift=-1cm] {In italiano};
 				\node (flit_i1) [line, below=of flit_i, xshift=2cm, yshift=-0.5cm] {London, Il richiamo della foresta};
 		\node (tlit) [box, below=of flit_i1, xshift=-3cm] {Technical};
 		\node (ptlit) [box, below=of tlit, xshift=1cm] {Programming};
 			\node (ptlit1) [line, below=of ptlit, xshift=2cm, yshift=-0.5cm] {Fain, Java Programming (24h)};
-			\node (ptlit2) [line, below=of ptlit1, yshift=-0.5cm] {Hastie, Elements of statistical learning};
-			\node (ptlit3) [line, below=of ptlit2, yshift=-0.5cm] {James, An Introduction to Statistical Learning};
-			\node (ptlit4) [line, below=of ptlit3, yshift=-0.5cm] {Rollings, Game Architecture and Design};
+			\node (ptlit2) [line, below=of ptlit1] {Hastie, Elements of statistical learning};
+			\node (ptlit3) [line, below=of ptlit2] {James, An Introduction to Statistical Learning};
+			\node (ptlit4) [line, below=of ptlit3] {Rollings, Game Architecture and Design};
 		\node (mtlit) [box, below=of ptlit4, xshift=-2cm] {Management};
 		\node (alit) [box, below=of mtlit,  xshift=-1cm] {Art};
 			\node (alit1) [line, below=of alit, xshift=1cm, yshift=-0.5cm] {Мейхолл, Суми-э};
 			\node (alit2) [line, below=of alit1, xshift=1.5cm] {Campanario, The Art of Urban Sketching};
+		\node (psylit) [box, below=of alit2,  xshift=-2.5cm] {Psy};
+			\node (psylit1) [line, below=of psylit, xshift=1cm, yshift=-0.5cm] {Леви, Куда жить};
+			\node (psylit2) [line, below=of psylit1, xshift=1cm] {Юнг, Проблемы души нашего времени};
+			\node (psylit3) [line, below=of psylit2, xshift=1cm] {Нойманн, Глубинная психология и новая этика};
 		
 	\node (seen) [box, right=of lit, xshift=6cm] {Seen};
 		\node (mu_seen) [box, below=of seen, xshift=1cm] {Music};
@@ -80,7 +88,8 @@
 				\node (mor_seen1) [line, below=of mor_seen, xshift=1cm, yshift=-0.5cm] {Рикки и Флеш};
 				\node (mor_seen2) [line, below=of mor_seen1] {Непутевая учеба};
 				\node (mor_seen3) [line, below=of mor_seen2] {20000 дней на Земле};
-			\node (moi_seen) [box, below=of mor_seen3, xshift=-1cm] {In Italiano};
+				\node (mor_seen4) [line, below=of mor_seen3] {Ложное искушение};
+			\node (moi_seen) [box, below=of mor_seen4, xshift=-1cm] {In Italiano};
 		\node (s_seen) [box, below=of moi_seen] {Series};
 		\node (se_seen) [box, below=of s_seen, xshift=1cm] {On English};
 		\node (sr_seen) [box, below=of se_seen] {На Русском};
@@ -114,7 +123,8 @@
 		\draw [arrow] (l_lern.west) |- (le_lern.west);
 		
 	\draw [arrow] (2016_1) -| (ordn);
-		\draw [arrow] (ordn.west) |- (gtd.west);
+		\draw [arrow] (ordn.west) |- (lordn.west);
+		\draw [arrow] (ordn.west) |- (pordn.west);
 		
 	\draw [arrow] (2016_1) -| (proj);
 		\draw [arrow] (proj.west) |- (prog.west);
@@ -135,6 +145,7 @@
 		\draw [arrow] (tlit.west) |- (ptlit.west);
 		\draw [arrow] (tlit.west) |- (mtlit.west);
 		\draw [arrow] (lit.west) |- (alit.west);
+		\draw [arrow] (lit.west) |- (psylit.west);
 		
 	\draw [arrow] (2016_1) -| (seen);
 		\draw [arrow] (seen.west) |- (mu_seen.west);
