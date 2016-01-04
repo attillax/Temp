@@ -37,12 +37,28 @@ Relations:
 	Love
 
 Projects (Programming):
-
+	GAT
+	PyGame
+	LoDe
+	ASCII-gen
+	Plantagochi
+	yafp
+	Small3d
+	DummySE
+	WaterStat
+	FinStat
+	Cryptonix
+	ModelViewer
 
 Projects (Animation):
 	NYA
 	Erlenkoenig
 	Cosmic
+
+Photos:
+	Italy
+	Europe
+	Russia
 
 Drawing (Ink & Graphite):
 	Lines
@@ -53,15 +69,23 @@ Drawing (Color):
 	Aquarelle
 	Sumi-e
 
-Calligraphy (Eastern):
+Calligraphy (Cursive):
 	Spencerian
 	Copperplate
 	Round-Hand
 	Ornamental
 	Speedwriting
 
+Calligraphy (Types):
+	Textur
+	Fractur
+	Rotunda
+
 Watch:
 
 Read:
 
 Visit:
+	jan|feb - Genova
+	march - Msk
+	august - Msk
