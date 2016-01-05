@@ -82,7 +82,13 @@
 		
 	\node (seen) [box, right=of lit, xshift=6cm] {Seen};
 		\node (mu_seen) [box, below=of seen, xshift=1cm] {Music};
-		\node (mo_seen) [box, below=of mu_seen] {Movies};
+			\node (mu_seen1) [line, below=of mu_seen, yshift=-0.5cm] {StopTalk};
+			\node (mu_seen2) [line, below=of mu_seen1] {DreamVeil};
+			\node (mu_seen3) [line, below=of mu_seen2] {BeRain};
+			\node (mu_seen4) [line, below=of mu_seen3] {MODUL};
+			\node (mu_seen5) [line, below=of mu_seen4] {HEARTSKIN};
+			\node (mu_seen6) [line, below=of mu_seen5] {Digital Machine};
+		\node (mo_seen) [box, below=of mu_seen6] {Movies};
 			\node (moe_seen) [box, below=of mo_seen, xshift=1cm] {On English};
 				\node (moe_seen1) [line, below=of moe_seen, xshift=1cm, yshift=-0.5cm] {The Little Prince (2015)};
 				\node (moe_seen2) [line, below=of moe_seen1, xshift=-1cm] {Spectre};
@@ -93,12 +99,15 @@
 				\node (mor_seen2) [line, below=of mor_seen1] {Непутевая учеба};
 				\node (mor_seen3) [line, below=of mor_seen2] {20000 дней на Земле};
 				\node (mor_seen4) [line, below=of mor_seen3] {Ложное искушение};
-			\node (moi_seen) [box, below=of mor_seen4, xshift=-1cm] {In Italiano};
+				\node (mor_seen5) [line, below=of mor_seen4] {Мариус};
+			\node (moi_seen) [box, below=of mor_seen5, xshift=-1cm] {In Italiano};
 		\node (s_seen) [box, below=of moi_seen] {Series};
 		\node (se_seen) [box, below=of s_seen, xshift=1cm] {On English};
 			\node (se_seen1) [line, below=of se_seen, xshift=1cm, yshift=-0.5cm] {War and Peace (2016)};		
 		\node (sr_seen) [box, below=of se_seen1, xshift=-1cm] {На Русском};
-		\node (si_seen) [box, below=of sr_seen] {In Italiano};
+			\node (sr_seen1) [line, below=of sr_seen, xshift=2cm, yshift=-0.5cm] {Особо тяжкие преступления (4 сезон)};	
+			\node (sr_seen2) [line, below=of sr_seen1, xshift=-1cm] {Хроники Шаннары};	
+		\node (si_seen) [box, below=of sr_seen2, xshift=-1cm] {In Italiano};
 	
 	\node (health) [box, right=of seen, xshift=3cm] {Health};
 		\node (phy) [box, below=of health, xshift=1cm] {Physical};
