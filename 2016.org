@@ -4,7 +4,7 @@ Body:
 	15 kg
 	Metamorphosis
 	Zumba (& other active dances)
-	Hikking
+	Hiking
 	Poi
 	Burlesque
 
@@ -89,3 +89,75 @@ Visit:
 	jan|feb - Genova
 	march - Msk
 	august - Msk
+
+PoliMi:
+	February exams:
+		PAMI
+		WfMS
+		PaS
+		DIP
+		ASE
+		MI
+		DB2
+	July exams:
+		IM
+		ACA
+		PECS
+		AWT
+		MI
+		PMSP
+		ACC
+		NLP
+	September exams:
+	Tesis:
+		DIP
+		MI
+		CG
+		PAMI/IRDM
+
+Tasks:
+JAN:
+	Send Kit
+	Exams preparation
+	Lose 5 kg
+	Dance
+	Burlesque
+	Heels
+	Describe BPresent
+	Learn Cursive Scripts
+	Learn Shadows & Factures
+	Finish Langenscheidt
+
+FEB:
+	Lose 5 kg
+	Pass February exams
+	Learn Cursive Scripts
+
+MAR:
+	Lose 5 kg
+	Visit Parents
+	Find a Job
+	Start Tesis
+	Complete BPresent
+
+APR:
+
+MAY:
+
+JUN:
+
+JUL:
+	Pass July exams
+
+AUG:
+	Visit Pavel's Wedding
+
+SEP:
+	Pass September exams
+
+OCT:
+
+NOV:
+
+DEC:
+
