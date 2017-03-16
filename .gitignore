@@ -1,9 +1,0 @@
-#TeX-produced 
-*.toc
-*.log
-*.aux
-*.synctex.gz
-*.out
-
-#Temporary
-*~
